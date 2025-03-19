@@ -28,11 +28,11 @@
                     <div class="card-body">
                         <form action="/add_prestamo" method="POST">
                             <label>Día</label>
-                            <input type="date" class="form-control mb-3" name="dia">
+                            <input type="date" class="form-control mb-3" name="dia" required>
                             <label>Hora</label>
-                            <input type="time" class="form-control mb-3" name="hora">
+                            <input type="time" class="form-control mb-3" name="hora" required>
                             <label>Libro</label>
-                            <input type="text" class="form-control mb-3" name="libro">
+                            <input type="text" class="form-control mb-3" name="libro" required>
                             <button class="btn btn-primary" type="submit">Guardar</button>
                         </form>
                     </div>
@@ -49,11 +49,12 @@
                             {% for prestamo in prestamos %}
                                 <li class="list-group-item mb-3">
                                     <form action="/edit_prestamo/{{prestamo.dia}}" method="POST">
-                                        <input type="date" class="form-control" value="{{prestamo.dia}}" name="dia">
+                                        <label>Día</label>
+                                        <input type="date" class="form-control" value="{{prestamo.dia}}" name="dia" required>
                                         <label>Hora</label>
-                                        <input type="time" class="form-control" value="{{prestamo.hora}}" name="hora">
+                                        <input type="time" class="form-control" value="{{prestamo.hora}}" name="hora" required>
                                         <label>Libro</label>
-                                        <input type="text" class="form-control" value="{{prestamo.libro}}" name="libro">
+                                        <input type="text" class="form-control" value="{{prestamo.libro}}" name="libro" required>
                                         <button class="btn btn-primary btn-sm mt-3" type="submit">Editar</button>
                                         <a href="{{url_for('delete_prestamo', dia=prestamo.dia)}}" class="btn btn-danger btn-sm mt-3">Eliminar</a>
                                     </form>

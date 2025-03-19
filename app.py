@@ -79,12 +79,15 @@ def delete_usuario(nombre):
 @app.route('/edit_usuario/<string:nombre>', methods=['POST'])
 def edit_usuario(nombre):
     usuarios = db['usuarios']
-    nombre = request.form['nombre']
+    nuevo_nombre = request.form['nombre']
     correo = request.form['correo']
     celular = request.form['celular']
 
-    if nombre and correo and celular:
-        usuarios.update_one({'nombre': nombre}, {'$set': {'nombre': nombre, 'correo': correo, 'celular': celular}})
+    if nuevo_nombre and correo and celular:
+        usuarios.update_one(
+            {'nombre': nombre},
+            {'$set': {'nombre': nuevo_nombre, 'correo': correo, 'celular': celular}}
+        )
         return redirect(url_for('usuarios'))
     else:
         return notFound()
@@ -119,12 +122,15 @@ def delete_prestamo(dia):
 @app.route('/edit_prestamo/<string:dia>', methods=['POST'])
 def edit_prestamo(dia):
     prestamos = db['prestamos']
-    dia = request.form['dia']
+    nuevo_dia = request.form['dia']
     hora = request.form['hora']
     libro = request.form['libro']
 
-    if dia and hora and libro:
-        prestamos.update_one({'dia': dia}, {'$set': {'dia': dia, 'hora': hora, 'libro': libro}})
+    if nuevo_dia and hora and libro:
+        prestamos.update_one(
+            {'dia': dia},
+            {'$set': {'dia': nuevo_dia, 'hora': hora, 'libro': libro}}
+        )
         return redirect(url_for('prestamos'))
     else:
         return notFound()
