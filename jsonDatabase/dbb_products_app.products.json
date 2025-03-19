@@ -1,0 +1,16 @@
+[{
+  "_id": {
+    "$oid": "67db0d7dabd6ed977930ac93"
+  },
+  "name": "ricardo",
+  "price": "jorge",
+  "quantity": "4"
+},
+{
+  "_id": {
+    "$oid": "67db25c80ce42232663f619e"
+  },
+  "name": "sdfsef",
+  "price": "sfefs",
+  "quantity": "5"
+}]
