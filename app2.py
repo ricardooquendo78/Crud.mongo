@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, Response, jsonify, redirect, url_for
-import database as dbase
-from product import Product, Usuario, Prestamo
+import database2 as dbase
+from product2 import Product, Usuario, Prestamo
 
 db = dbase.dbConnection()
 
