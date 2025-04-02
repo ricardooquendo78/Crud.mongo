@@ -64,8 +64,53 @@ Registrar un préstamo (asociando libro y usuario).
 
 Consultar préstamos activos.
 
+![libreria](https://github.com/user-attachments/assets/0b234e97-762e-4ea4-af09-b13a4ea35c22)
 
-Cómo Ejecutar el Proyecto
+![usuarios](https://github.com/user-attachments/assets/644d116b-2e49-4044-8a85-9a2834d95101)
 
-Clona el repositorio:
+![prestamos](https://github.com/user-attachments/assets/053bb1b3-9fef-49aa-b6e3-df2fde4e0338)
+
+
+AHORA VAMOS A DAR UNA BREVE EXPLICACION DE LO QUE SERIA EL PROYECTO EN LA RAMA CREADA QUE SE LLAMA "SQL".
+
+Rama SQL (Base de Datos Relacional)
+Esta rama adapta el mismo sistema de gestión de biblioteca para usar una base de datos SQL en lugar de MongoDB. Las funcionalidades del CRUD son idénticas, pero la estructura de datos y las consultas siguen el modelo relacional.
+
+🗂️ Estructura de Tablas (SQL)
+Se crearon tres tablas:
+
+1. Tabla libros
+
+titulo (VARCHAR).
+
+autor (VARCHAR).
+
+cantidad_ejemplares (INT).
+
+2. Tabla usuarios
+
+nombre (VARCHAR).
+
+correo (VARCHAR, UNIQUE).
+
+celular (VARCHAR).
+
+3. Tabla prestamos
+
+dia (DATE o VARCHAR).
+
+hora (TIME o VARCHAR).
+
+libro (VARCHAR).
+
+![sql libros](https://github.com/user-attachments/assets/61ca6bfe-f58f-4953-84fe-02c02cfcba40)
+
+![sql usuarios](https://github.com/user-attachments/assets/aedac121-c9de-42c4-b231-a78827a2a9e0)
+
+![sql prestamos](https://github.com/user-attachments/assets/9659f0c9-ab3c-4f4d-b0ae-b30d51ced583)
+
+![heidi](https://github.com/user-attachments/assets/02bfdc3b-ee67-416b-97cb-320b7c70e837)
+
+
+![gracias](https://github.com/user-attachments/assets/71035866-1aff-475d-b696-b4684262f1da)
 
